@@ -1,5 +1,5 @@
 import {radioPlayerInit} from "./radioPlayer.js";
-import {audioPlayerInit} from "./audioPlayer.js";
+import {musicPlayerInit} from "./musicPlayer.js";
 import {videoPlayerInit} from "./videoPlayer.js";
 
 const playerBtn = document.querySelectorAll('.player-btn');
@@ -20,4 +20,6 @@ playerBtn.forEach((element, id) => {
     })    
 });
 
+videoPlayerInit();
+musicPlayerInit();
 radioPlayerInit();
