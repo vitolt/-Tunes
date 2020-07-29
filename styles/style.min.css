@@ -5,6 +5,14 @@ html{-webkit-box-sizing:border-box;box-sizing:border-box}*,*::before,*::after{-w
     margin: .5em;
 }
 
+.video-volume {
+    max-width: 100px;
+}
+
+.audio-volume {
+    max-width: 100px;
+}
+
 .radio-volume {
     max-width: 100px;
 }

@@ -16,6 +16,9 @@ export const musicPlayerInit = () => {
     const audioProgress = document.querySelector('.audio-progress');
     const audioProgressTiming = document.querySelector('.audio-progress__timing');
     const audioTimeTotal = document.querySelector('.audio-time__total');
+    const audioVolume = document.querySelector('.audio-volume');
+
+    audioPlayer.volume = audioVolume.value / 100;
 
     const togglePlay = () =>{
         if(audioPlayer.paused){
@@ -57,4 +60,8 @@ export const musicPlayerInit = () => {
         audioProgressTiming.Width = (currentTime / duration) * 100;
     })
 
+    audioVolume.addEventListener('input', () => {
+        const value = audioVolume.value;
+        audioPlayer.volume = value / 100;
+    })    
 }

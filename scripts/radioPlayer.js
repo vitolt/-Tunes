@@ -6,7 +6,7 @@ export const radioPlayerInit = () => {
     const radioHeaderBig = document.querySelector('.radio-header__big');
     const radioItems = document.querySelectorAll('.radio-item');
     const radioStop = document.querySelector('.radio-stop');
-    const radioVolume = document.querySelector('.radio-volume');
+    const audioVolume = document.querySelector('.radio-volume');
 
     const audio = new Audio();
     audio.type = 'audio/aac';
@@ -49,15 +49,15 @@ export const radioPlayerInit = () => {
         radioCoverImg.src = urlImg;
 
         audio.src = target.dataset.radioStantion;
-        audio.volume = radioVolume.value / 100;
+        audio.volume = audioVolume.value / 100;
         
         audio.play();
         radioStop.disabled = false;
 
     })
 
-    radioVolume.addEventListener('input', () => {
-        const value = radioVolume.value;
+    audioVolume.addEventListener('input', () => {
+        const value = audioVolume.value;
         audio.volume = value / 100;
     })
 
