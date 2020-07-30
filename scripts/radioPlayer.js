@@ -66,4 +66,6 @@ export const radioPlayerInit = () => {
     audio.addEventListener('play', () => toggleIcon());
     audio.addEventListener('pause', () => toggleIcon());
 
+    return audio;
+
 }

@@ -52,7 +52,7 @@ export const videoPlayerInit = () => {
 
     videoPlayer.addEventListener('timeupdate', () => {
         const currentTime = videoPlayer.currentTime;
-        const duration = videoPlayer.duration;
+        const duration = videoPlayer.duration === NaN ? 0 : videoPlayer.duration;
 
         videoProgress.value = (currentTime / duration) * 100;
 
@@ -79,5 +79,6 @@ export const videoPlayerInit = () => {
         videoPlayer.volume = value / 100;
     })
 
+    return videoPlayer;
     
 }
